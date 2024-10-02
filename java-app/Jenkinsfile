@@ -1,0 +1,31 @@
+pipeline {
+	agent any
+	stages {
+		stage('Checkout') {
+			steps {
+				sh'''
+				echo 'Checkout the SCM'
+				checkout scm
+				'''
+			}
+		}
+
+		stage('Build') {
+			steps {
+				sh'''
+				echo 'Compiling the Java Class.'
+				javac HelloWorld.java
+				'''
+			}
+		}
+		
+		stage('Run') {
+			steps {
+				sh'''
+				echo 'Running the Java class.'
+				java HelloWorld
+				'''
+			}
+		}
+	}
+}
