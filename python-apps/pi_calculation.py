@@ -1,5 +1,5 @@
 from decimal import Decimal, getcontext
-import time
+from datetime import datetime
 
 # Set the precision level higher to store and display more digits
 getcontext().prec = 50  # Increase precision to 50 decimal places
@@ -15,8 +15,8 @@ def calculate_pi(iterations):
 
 # Example: calculating pi with 50 iterations
 iterations = 100
-past = time.now()
+past = datetime.now()
 pi_value = calculate_pi(iterations)
-future = time.now()
+future = datetime.now()
 print(f"Approximated value of pi after {iterations} iterations: {pi_value}")
 print(f"The script took {future - past} Seconds.")
