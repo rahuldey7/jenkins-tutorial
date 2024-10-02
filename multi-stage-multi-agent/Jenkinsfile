@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                     python --version
-                    pip install django==5.0
+                    pip install --user django==5.0
                     pip show django
                 '''
             }
