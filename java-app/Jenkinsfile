@@ -20,7 +20,7 @@ pipeline {
 			steps {
 				sh'''
 				echo 'Running the Java class.'
-				java HelloWorld
+				java java-app/HelloWorld
 				'''
 			}
 		}
