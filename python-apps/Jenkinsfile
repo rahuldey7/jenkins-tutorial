@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Execute Script') {
             steps {
-                sh 'python python-apps/pi_calculation.py'
+                sh 'python3 python-apps/pi_calculation.py'
                 sh 'echo Script Executed Succesfully.'
             }
         }
