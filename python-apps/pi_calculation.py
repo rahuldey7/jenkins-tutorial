@@ -2,7 +2,7 @@ from decimal import Decimal, getcontext
 from datetime import datetime
 
 # Set the precision level higher to store and display more digits
-getcontext().prec = 50  # Increase precision to 50 decimal places
+getcontext().prec = 100  # Increase precision to 50 decimal places
 
 def calculate_pi(iterations):
     pi_approx = Decimal(0)
