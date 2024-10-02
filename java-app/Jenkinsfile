@@ -5,8 +5,8 @@ pipeline {
 			steps {
 				sh'''
 				echo 'Checkout the SCM'
-				checkout scm
 				'''
+				checkout scm
 			}
 		}
 
