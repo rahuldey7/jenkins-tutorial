@@ -3,9 +3,6 @@ pipeline {
 	stages {
 		stage('Checkout') {
 			steps {
-				sh'''
-				echo 'Checkout the SCM'
-				'''
 				checkout scm
 			}
 		}
@@ -13,7 +10,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				sh'''
-				echo 'Compiling the Java Class.'
+				ls -l
 				javac HelloWorld.java
 				'''
 			}
