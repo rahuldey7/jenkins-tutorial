@@ -1,0 +1,30 @@
+pipeline {
+    agent none
+    stages {
+        stage('backend') {
+            agent {
+                docker {
+                    image 'python:3.11.7'
+                }
+            }
+            steps {
+                sh '''
+                    python --version
+                    pip install django==5.0
+                    pip show django
+                '''
+            }
+        }
+
+        stage('frontend') {
+            agent {
+                docker {
+                    image 'node:16-alpine'
+                }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
