@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.11.7' // Use the same base image as your Dockerfile
-        }
-    }
+    agent any
     environment {
         DOCKER_IMAGE = 'chat-app'
         DOCKER_TAG = 'latest'
