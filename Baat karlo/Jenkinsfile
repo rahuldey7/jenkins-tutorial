@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'docker build -t chat-app ./Baat karlo/'
+            }
+        }
+        stage('Production') {
+            steps {
+                sh 'docker run -p 8000:8000 chat-app'
+            }
+        }
+    }
+}
