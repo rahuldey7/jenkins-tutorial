@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t chat-app ./Baat karlo/'
+                sh 'docker build -t chat-app "./Baat karlo/"'
             }
         }
         stage('Production') {
